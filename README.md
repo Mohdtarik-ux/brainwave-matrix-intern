@@ -3,6 +3,9 @@ A real time chat application by using goggle firebase .
 
 #  Real-Time Chat Application
 
+![dashboard chat-app](https://github.com/user-attachments/assets/37527286-d729-41af-965d-420e54e6e363)
+
+
 A **real-time chat application** built using **Firebase** and **Vanilla HTML, CSS, and JavaScript**.  
 This project enables users to sign up, log in, and chat in real-time with responsive UI and Firebase integration.
 
