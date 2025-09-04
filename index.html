@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth-container">
+        <h2>Chat App</h2>
+        <div id="login-form">
+            <h3>Login</h3>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="showSignup()">Go to Signup</button>
+            <button onclick="googleLogin()">Login with Google</button>
+        </div>
+        <div id="signup-form" style="display: none;">
+            <h3>Signup</h3>
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button onclick="signup()">Signup</button>
+            <button onclick="showLogin()">Back to Login</button>
+        </div>
+    </div>
+    <div id="chat-container" style="display: none;">
+        <div class="container">
+            <h1>Chat App</h1>
+            <p>Logged in as: <span id="user-display"></span> <button onclick="logout()">Logout</button></p>
+            <div id="chat-box"></div>
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Firebase SDK Compat Version (Fixed 'export' error) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBfXCxLh2bLXM8z_x6YJdG_Hz4ooIhU2Xs",
+            authDomain: "we-chat-54071.firebaseapp.com",
+            projectId: "we-chat-54071",
+            storageBucket: "we-chat-54071.firebasestorage.app",
+            messagingSenderId: "500132492788",
+            appId: "1:500132492788:web:1b2ea5c59705586f7335a1",
+            measurementId: "G-M33JBCV0LV"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
